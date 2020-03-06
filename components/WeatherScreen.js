@@ -62,8 +62,8 @@ class WeatherScreen extends Component {
     this.setState({ country, main });
     axios
       .get(
-        `https://api.darksky.net/forecast/6184660888522e631e8a5e6f61144e06/${data.data.latitude},${data.data.longitude}`
-        //"http://battuta.medunes.net/api/country/all/?key=81af445fe0efd7597d7fbd103cf17a45"
+        `https://api.darksky.net/forecast/YOUR KEY HERE/${data.data.latitude},${data.data.longitude}`
+        "
       )
       .then(Response => {
         var temp = (Response.data.currently.temperature - 32) * 5;
@@ -134,8 +134,3 @@ class WeatherScreen extends Component {
 }
 
 export default WeatherScreen;
-/*         {this.state.temp >= 0 ? (
-  this.state.temp
-  ) : (
-    <React.Fragment>{-1 * this.state.temp}</React.Fragment>
-  )}*/
