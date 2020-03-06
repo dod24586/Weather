@@ -22,7 +22,7 @@ export class CountryScreen extends Component {
   componentDidMount() {
     axios
       .get(
-        "http://battuta.medunes.net/api/country/all/?key=81af445fe0efd7597d7fbd103cf17a45"
+        "http://battuta.medunes.net/api/country/all/?key=YOU KEY HERE"
       )
       .then(Response => {
         var allCountry = Response.data.map(x => {
@@ -39,7 +39,7 @@ export class CountryScreen extends Component {
     this.setState({ allCity: [] });
     axios
       .get(
-        `http://battuta.medunes.net/api/region/${val}/all/?key=81af445fe0efd7597d7fbd103cf17a45`
+        `http://battuta.medunes.net/api/region/${val}/all/?key= YOUR KEY HERE`
       )
       .then(Response => {
         var allCity = Response.data.map(x => {
@@ -55,7 +55,7 @@ export class CountryScreen extends Component {
   handleCity = val => {
     axios
       .get(
-        `http://battuta.medunes.net/api/city/${this.state.SelectCountry}/search/?region=${val}&key=81af445fe0efd7597d7fbd103cf17a45`
+        `http://battuta.medunes.net/api/city/${this.state.SelectCountry}/search/?region=${val}&key=YOUR KEY HERE`
       )
       .then(Response => {
         var allState = Response.data.map(x => {
