@@ -7,7 +7,7 @@ export class WeatherScreen extends Component {
   componentDidMount() {
     axios
       .get(
-        `http://api.openweathermap.org/data/2.5/weather?q=${this.state.getCountry}&appid=aa7f791f59683027dc7f4b3c7dbc2cdf`
+        `http://api.openweathermap.org/data/2.5/weather?q=${this.state.getCountry}&appid=YOUR ID`
       )
       .then(Response => {
         var temp = Response.data.main.temp - 272.15;
